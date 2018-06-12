@@ -7,7 +7,7 @@ const datasets = [
     label: 'My First dataset',
     backgroundColor: brandPrimary,
     borderColor: 'rgba(255,255,255,.55)',
-    data: [70, 59, 84, 84, 51, 55, 40]
+    data: [60, 100, 84, 50, 51, 55, 40]
   }
 ]
 
@@ -15,7 +15,7 @@ export default Line.extend({
   props: ['height'],
   mounted () {
     this.renderChart({
-      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+      labels: ['January', 'Feb', 'March', 'April', 'May', 'June', 'July'],
       datasets: datasets
     }, {
       maintainAspectRatio: false,

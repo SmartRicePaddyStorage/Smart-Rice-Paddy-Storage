@@ -8,10 +8,18 @@
               <template slot="button-content">
                 <i class="icon-settings"></i>
               </template>
-              <b-dropdown-item>Action</b-dropdown-item>
-              <b-dropdown-item>Another action</b-dropdown-item>
-              <b-dropdown-item>Something else here...</b-dropdown-item>
-              <b-dropdown-item disabled>Disabled action</b-dropdown-item>
+              <b-dropdown-item>
+                <router-link :to="'temperature/1'">
+                  Control Settings
+                </router-link>
+              </b-dropdown-item>
+              <b-dropdown-item>
+                <router-link :to="'temperatureChart/1'">
+                  View Chart
+                </router-link>
+              </b-dropdown-item>
+              <!-- <b-dropdown-item>Something else here...</b-dropdown-item>
+              <b-dropdown-item disabled>Disabled action</b-dropdown-item> -->
             </b-dropdown>
             <h4 class="mb-0">{{ temperature }}C </h4>
             <p>Temerature</p>
@@ -26,10 +34,18 @@
               <template slot="button-content">
                 <i class="icon-settings"></i>
               </template>
-              <b-dropdown-item>Action</b-dropdown-item>
-              <b-dropdown-item>Another action</b-dropdown-item>
-              <b-dropdown-item>Something else here...</b-dropdown-item>
-              <b-dropdown-item disabled>Disabled action</b-dropdown-item>
+              <b-dropdown-item>
+                <router-link :to="'humidity/1'">
+                  Control Settings
+                </router-link>
+              </b-dropdown-item>
+              <b-dropdown-item>
+                <router-link :to="'humidityChart/1'">
+                  View Chart
+                </router-link>
+              </b-dropdown-item>
+              <!-- <b-dropdown-item>Something else here...</b-dropdown-item>
+              <b-dropdown-item disabled>Disabled action</b-dropdown-item> -->
             </b-dropdown>
             <h4 class="mb-0">{{humidity}}%</h4>
             <p>Humidity</p>
@@ -44,10 +60,18 @@
               <template slot="button-content">
                 <i class="icon-settings"></i>
               </template>
-              <b-dropdown-item>Action</b-dropdown-item>
-              <b-dropdown-item>Another action</b-dropdown-item>
-              <b-dropdown-item>Something else here...</b-dropdown-item>
-              <b-dropdown-item disabled>Disabled action</b-dropdown-item>
+              <b-dropdown-item>
+                <router-link :to="'moistureContent/1'">
+                  Control Settings
+                </router-link>
+              </b-dropdown-item>
+              <b-dropdown-item>
+                <router-link :to="'moistureContentChart/1'">
+                  View Chart
+                </router-link>
+              </b-dropdown-item>
+              <!-- <b-dropdown-item>Something else here...</b-dropdown-item>
+              <b-dropdown-item disabled>Disabled action</b-dropdown-item> -->
             </b-dropdown>
             <h4 class="mb-0">{{moisture}}%</h4>
             <p>Moisture Content</p>
@@ -62,20 +86,73 @@
               <template slot="button-content">
                 <i class="icon-settings"></i>
               </template>
-              <b-dropdown-item>Action</b-dropdown-item>
-              <b-dropdown-item>Another action</b-dropdown-item>
-              <b-dropdown-item>Something else here...</b-dropdown-item>
-              <b-dropdown-item disabled>Disabled action</b-dropdown-item>
+              <b-dropdown-item>
+                <router-link :to="'lightIntensity/1'">
+                  Control Settings
+                </router-link>
+              </b-dropdown-item>
+              <b-dropdown-item>
+                <router-link :to="'lightIntensityChart/1'">
+                  View Chart
+                </router-link>
+              </b-dropdown-item>
+              <!-- <b-dropdown-item>Something else here...</b-dropdown-item>
+              <b-dropdown-item disabled>Disabled action</b-dropdown-item> -->
             </b-dropdown>
             <h4 class="mb-0">{{light}}</h4>
             <p>Light Intensity</p>
           </div>
           <card-bar-chart-example class="chart-wrapper px-3" style="height:70px;" height="70"/>
         </b-card>
+
+
+
+      </div><!--/.col-->
+
+      <div class="col-sm-6 col-lg-3">
+        <b-card class="bg-primary" :no-block="true">
+          <div class="card-body pb-0">
+            <b-dropdown class="float-right" variant="transparent p-0" right>
+              <template slot="button-content">
+                <i class="icon-settings"></i>
+              </template>
+              <b-dropdown-item>Control Settings</b-dropdown-item>
+              <b-dropdown-item>View Chart</b-dropdown-item>
+              <!-- <b-dropdown-item>Something else here...</b-dropdown-item>
+              <b-dropdown-item disabled>Disabled action</b-dropdown-item> -->
+            </b-dropdown>
+            <h4 class="mb-0">{{ temperature }}C </h4>
+            <p>Temerature</p>
+          </div>
+          <card-line1-chart-example class="chart-wrapper px-3" style="height:70px;" height="70"/>
+        </b-card>
+      </div><!--/.col-->
+      <div class="col-sm-6 col-lg-3">
+        <b-card class="bg-primary" :no-block="true">
+          <div class="card-body pb-0">
+            <b-dropdown class="float-right" variant="transparent p-0" right>
+              <template slot="button-content">
+                <i class="icon-settings"></i>
+              </template>
+              <b-dropdown-item>Control Settings</b-dropdown-item>
+              <b-dropdown-item>View Chart</b-dropdown-item>
+              <!-- <b-dropdown-item>Something else here...</b-dropdown-item>
+              <b-dropdown-item disabled>Disabled action</b-dropdown-item> -->
+            </b-dropdown>
+            <h4 class="mb-0">{{ temperature }}C </h4>
+            <p>Temerature</p>
+          </div>
+          <card-line1-chart-example class="chart-wrapper px-3" style="height:70px;" height="70"/>
+        </b-card>
       </div><!--/.col-->
     </div><!--/.row-->
 
-   <!-- <b-card>
+
+
+
+    
+
+    <!-- <b-card>
       <div class="row">
         <div class="col-sm-5">
           <h4 class="card-title mb-0">Traffic</h4>
@@ -122,8 +199,8 @@
           </li>
         </ul>
       </div>
-    </b-card> -->
-    <!--<div class="row">
+    </b-card>
+    <div class="row">
       <div class="col-sm-6 col-lg-3">
         <div class="social-box facebook">
           <i class="fa fa-facebook"></i>
@@ -176,7 +253,7 @@
               <span>feeds</span>
             </li>
           </ul>
-        </di
+        </div>
       <div class="col-sm-6 col-lg-3">
         <div class="social-box google-plus">
           <i class="fa fa-google-plus"></i>
@@ -195,12 +272,12 @@
           </ul>
         </div>
       </div>
-    </div>-->
+    </div>
     <div class="row">
       <div class="col-md-12">
-        <!-- <b-card header="Traffic &amp; Sales">
-          <div class="row"> -->
-            <!-- <div class="col-sm-12 col-lg-4">
+        <b-card header="Traffic &amp; Sales">
+          <div class="row"> 
+            <div class="col-sm-12 col-lg-4">
               <div class="row">
                 <div class="col-sm-6">
                   <Callout variant="info">
@@ -284,8 +361,8 @@
                   <span class="badge badge-pill badge-info"></span> <small>New clients</small> &nbsp; <span class="badge badge-pill badge-danger"></span> <small>Recurring clients</small>
                 </li>
               </ul>
-            </div> -->
-            <!-- <div class="col-sm-6 col-lg-4">
+            </div>
+            <div class="col-sm-6 col-lg-4">
               <div class="row">
                 <div class="col-sm-6">
                   <Callout variant="warning">
@@ -355,10 +432,10 @@
                   <button type="button" class="btn btn-sm btn-link text-muted"><i class="icon-options"></i></button>
                 </li>
               </ul>
-            </div> -->
-          <!-- </div>
-          <br/> -->
-          <!-- <b-table class="table-outline mb-0" hover responsive outline
+            </div>
+          </div>
+          <br/>
+           <b-table class="table-outline mb-0" hover responsive outline
             :items="tableItems"
             :fields="tableFields"
             head-variant="default"
@@ -399,10 +476,11 @@
               <div class="small text-muted">Last login</div>
               <strong>{{item.value}}</strong>
             </template>
-          </b-table> -->
-        <!-- </b-card> -->
+          </b-table>
+        </b-card> 
       </div>
     </div>
+  </div>-->
   </div>
 </template>
 
